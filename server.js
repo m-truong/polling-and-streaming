@@ -29,10 +29,20 @@ app.get('/messages', (req, res) => {
 })
 
 app.post('/messages', (req, res) => {
+  // grabs the message from request body
   const message = req.body;
+  // then pushes the message object into messages object-array
   messages.push(message);
   
   for (const socket of sockets) {
     socket.send(JSON.stringify(message));
   }
+});
+
+app.ws('/messages', socket => {
+  sockets.push(socket);
+
+  socket.on('close', () => {
+    sockets.splice(sockets.indexOf(socket), 1);
+  });
 });
