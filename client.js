@@ -58,6 +58,7 @@ function streamMessages() {
   const messagingSocket = messagingAPI.createMessagingSocket();
 
   // this is the event listener for the socket connection
+  // this creates a long-lived connection
   messagingSocket.on('message', message => {
     // this is the JSON.parse method, which converts the message into an object
     const parsedMessage = JSON.parse(message);

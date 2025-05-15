@@ -1,7 +1,6 @@
 // initialize important 'streaming' variables
 // this is for the client-2-server live connection!
 const axios = require('axios');
-const { get } = require('http');
 const WebSocket = require('ws');
 
 // this function returns new socket opened at 3001

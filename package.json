@@ -1,0 +1,26 @@
+{
+  "name": "polling-and-streaming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-truong/polling-and-streaming.git"
+  },
+  "author": "m-truong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m-truong/polling-and-streaming/issues"
+  },
+  "homepage": "https://github.com/m-truong/polling-and-streaming#readme",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "express": "^5.1.0",
+    "express-ws": "^5.0.2",
+    "ws": "^8.18.2"
+  }
+}
